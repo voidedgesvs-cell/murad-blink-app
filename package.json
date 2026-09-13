@@ -1,0 +1,32 @@
+{
+  "name": "murad-blink",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MURAD BLINK — friends map + MURAD OPTOM game",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:win": "electron-builder --win nsis",
+    "cap:sync": "npx cap sync",
+    "android:add": "npx cap add android",
+    "ios:add": "npx cap add ios"
+  },
+  "dependencies": {
+    "@capacitor/core": "8.5.2",
+    "@capacitor/android": "8.5.2",
+    "@capacitor/ios": "8.5.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "8.5.2",
+    "electron": "^38.0.0",
+    "electron-builder": "^26.0.0"
+  },
+  "build": {
+    "appId": "com.murad.blink",
+    "productName": "MURAD BLINK",
+    "directories": {"output": "dist"},
+    "files": ["index.html", "main.js", "web/**/*"],
+    "win": {"target": "nsis", "icon": "build/icon.ico"},
+    "nsis": {"oneClick": false, "allowToChangeInstallationDirectory": true, "createDesktopShortcut": true}
+  }
+}

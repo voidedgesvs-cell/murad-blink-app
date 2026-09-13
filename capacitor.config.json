@@ -1,0 +1,9 @@
+{
+  "appId": "com.murad.blink",
+  "appName": "MURAD BLINK",
+  "webDir": "web",
+  "server": {
+    "androidScheme": "https",
+    "iosScheme": "capacitor"
+  }
+}
